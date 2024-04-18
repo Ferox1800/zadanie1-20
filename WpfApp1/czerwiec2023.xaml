@@ -11,6 +11,24 @@
             <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top">
                 <Button Margin="5" Name="powrot" Click="powrot_Click">Wróć</Button>
             </StackPanel>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Margin="20,10">
+                    <GroupBox Margin="5,0,5,0" Header="Rodzaj przesyłki" FontSize="15">
+                        <StackPanel>
+                            <RadioButton Content="Pocztówka" Name="pocztowka" Margin="5,10,5,5"/>
+                            <RadioButton Content="List" Name="list" Margin="5"/>
+                            <RadioButton Content="Paczka" Name="paczka" Margin="5"/>
+                        </StackPanel>
+                    </GroupBox>
+                    <Button Content="Sprawdź Cenę" Margin="15"/>
+                    <Image x:Name="koperta" Source="C:\Users\student\Desktop\3IP\zadanie-20\WpfApp1\koperta3.png" Height="100" Width="150" HorizontalAlignment="Left" Margin="15,0,0,0"/>
+                    <Label FontSize="15" FontWeight="Bold" Margin="10,0,10,10">s</Label>
+                </StackPanel>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>
