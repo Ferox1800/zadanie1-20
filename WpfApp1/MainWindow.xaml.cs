@@ -34,16 +34,23 @@ namespace WpfApp1
 
         private void sty24_Click(object sender, RoutedEventArgs e)
         {
-                styczen2024 Styczen2024 = new styczen2024();
-                Styczen2024.Show();
+            styczen2024 Styczen2024 = new styczen2024();
+            Styczen2024.Show();
 
-                this.Close();
-            }
+            this.Close();
+        }
 
         private void cze23_Click(object sender, RoutedEventArgs e)
         {
             czerwiec2023 Czerwiec2023 = new czerwiec2023();
             Czerwiec2023.Show();
+
+            this.Close();
+        }
+
+        private void egzamin_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

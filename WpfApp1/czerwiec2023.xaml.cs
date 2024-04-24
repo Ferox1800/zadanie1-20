@@ -31,5 +31,34 @@ namespace WpfApp1
 
                 this.Close();
         }
+
+        private void confirm_Click(object sender, RoutedEventArgs e)
+        {
+            int kod = kod_pocztowy.Text.Length;
+
+            if(kod!=5 ) {
+                MessageBox.Show("Kod pocztowy jest niepoprawny");
+            }
+            else
+            {
+                MessageBox.Show("Kod pocztowy jest poprawny");
+            }
+        }
+
+        private void sprawdz_Click(object sender, RoutedEventArgs e)
+        {
+            double cenaj;
+            if(pocztowka.IsChecked == true)
+            {
+                cenaj = 1;
+            }else if(list.IsChecked == true)
+            {
+                cenaj = 1.5;      
+            }else {
+                cenaj = 10;
+            }
+
+            cena.Content ="cena: "+cenaj +"zł";
+        }
     }
 }
