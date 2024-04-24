@@ -26,7 +26,7 @@
                     </GroupBox>
                     <Button Content="Sprawdź Cenę" Margin="15"/>
                     <Image x:Name="koperta" Source="C:\Users\student\Desktop\3IP\zadanie-20\WpfApp1\koperta3.png" Height="100" Width="150" HorizontalAlignment="Left" Margin="15,0,0,0"/>
-                    <Label FontSize="15" FontWeight="Bold" Margin="10,0,10,10">s</Label>
+                    <Label FontSize="15" FontWeight="Bold" Margin="10,0,10,10"></Label>
                 </StackPanel>
             </Grid>
         </StackPanel>
