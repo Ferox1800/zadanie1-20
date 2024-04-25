@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="podapp" Height="450" Width="800">
-    <Grid>
+        Title="Styczeń 2023" Height="450" Width="800">
+    <Grid Background="LightSteelBlue">
         
+        <Border BorderBrush="White" BorderThickness="3" HorizontalAlignment="Left" Height="248" Margin="30,56,0,0" VerticalAlignment="Top" Width="340" CornerRadius="5,5,5,5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="89*"/>
+                    <ColumnDefinition Width="205*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Left" Margin="10,-10,0,0" Height="22" Width="112" TextWrapping="Wrap" Background="LightSteelBlue" VerticalAlignment="Top" IsEnabled="False" FontSize="14" Grid.ColumnSpan="2"><Run Language="pl-pl" Text="Dane pracownika"/><LineBreak/><Run Language="pl-pl"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="21,92,152,121" Grid.ColumnSpan="2" FontSize="14"><Run Language="pl-pl" Text="Nazwisko"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="21,132,152,82" Grid.ColumnSpan="2" FontSize="14"><Run Language="pl-pl" Text="Stanowisko"/></TextBlock>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="58,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="58,92,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" TextChanged="TextBox_TextChanged" Grid.Column="1"/>
+                <TextBlock TextWrapping="Wrap" Margin="21,47,152,164" Grid.ColumnSpan="2" FontSize="14"><Run Language="pl-pl" Text="Imię"/></TextBlock>
+                <ComboBox HorizontalAlignment="Left" Margin="58,135,0,0" VerticalAlignment="Top" Width="134" SelectionChanged="ComboBox_SelectionChanged_1" Grid.Column="1">
+                    <ComboBoxItem>Fryzjer</ComboBoxItem>
+                    <ComboBoxItem>Piekarz</ComboBoxItem>
+                    <ComboBoxItem>Okulista</ComboBoxItem>
+                    <ComboBoxItem>Aptekarz</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+        </Border>
+        
+        <Border BorderBrush="White" BorderThickness="3" HorizontalAlignment="Left" Height="248" Margin="434,56,0,0" VerticalAlignment="Top" Width="340" CornerRadius="5,5,5,5">
+            <Grid>
+                <TextBlock HorizontalAlignment="Left" Margin="10,-10,0,0" Height="22" Width="120" TextWrapping="Wrap" Background="LightSteelBlue" VerticalAlignment="Top" IsEnabled="False" FontSize="14"><Run Language="pl-pl" Text="Generowanie hasła"/></TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="24,39,147,0" VerticalAlignment="Top" Height="27" FontSize="14"><Run Language="pl-pl" Text="Ile znaków"/></TextBlock>
+                <TextBox HorizontalAlignment="Left" Height="29" Margin="147,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="133" TextChanged="TextBox_TextChanged" Name="ilosc"/>
+                <CheckBox Name="c_letter" Content="Małe i wielkie litery" Margin="24,71,123,153" Checked="CheckBox_Checked"/>
+                <CheckBox Name="c_number" Content="Cyfry" Margin="24,105,123,107" Checked="CheckBox_Checked"/>
+                <CheckBox Name="c_characters" Content="Znaki specjalne" Margin="24,140,0,0" Checked="CheckBox_Checked" RenderTransformOrigin="0.5,0.5" FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <CheckBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="0" Y="0"/>
+                        </TransformGroup>
+                    </CheckBox.RenderTransform>
+                </CheckBox>
+                <Button Content="Generuj hasło" HorizontalAlignment="Center" Height="23" Margin="0,201,0,0" VerticalAlignment="Top" Width="84" Background="#FF405DFF" Foreground="White" BorderThickness="2" BorderBrush="gray" Click="Button_Click_1"/>
+            </Grid>
+        </Border>
+
+        <Button Content="Zatwierdź" Click="AcceptOnClick" HorizontalAlignment="Center" Height="33" Margin="0,377,0,0" VerticalAlignment="Top" Width="262" Background="#FF4C68FF" Foreground="White" BorderThickness="2" BorderBrush="gray"/>
     </Grid>
 </Window>

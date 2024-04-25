@@ -10,8 +10,8 @@
         <StackPanel HorizontalAlignment="Center" Margin="10">
             <Label FontSize="25" FontWeight="DemiBold">Wzory aplikacji desktopowych</Label>
             <Button Margin="20" Content="Styczeń 2023" Height="40" FontSize="20" Name="sty23" Click="sty23_Click"/>
-            <Button Margin="20" Content="Styczeń 2024" Height="40" FontSize="20" Name="sty24" Click="sty24_Click"/>
             <Button Margin="20" Content="Czerwiec 2023" Height="40" FontSize="20" Name="cze23" Click="cze23_Click"/>
+            <Button Margin="20" Content="Styczeń 2024" Height="40" FontSize="20" Name="sty24" Click="sty24_Click"/>
             <Button Margin="20" Content="Egzamin" Height="40" FontSize="20" Name="egzamin" Click="egzamin_Click"/>
         </StackPanel>
     </Grid>
